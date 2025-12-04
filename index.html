@@ -4,50 +4,72 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Immigration General Services LLC</title>
-  <meta name="description" content="Immigration General Services LLC – one-stop immigration support for individuals and businesses: filings, translations, paralegal services, attorney coordination, and compliance."/>
+  <meta name="description" content="Immigration General Services LLC – one-stop immigration support for individuals and businesses: filings, translations, paralegal services, attorney coordination, and compliance.">
   <style>
-    :root{ --blue:#004080; --blue2:#0066cc; --bg:#f9f9f9; --card:#fff; --shadow:0 2px 10px rgba(0,0,0,.1);} 
-    *{box-sizing:border-box}
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background-color: var(--bg); color: #333; }
-    header { background: var(--blue); color: #fff; }
-    .bar { max-width: 1100px; margin: 0 auto; display:flex; justify-content:center; padding:16px; }
-    .brand { display:flex; flex-direction:column; align-items:center; gap:8px; text-align:center; }
-    .brand img{ height:90px; width:auto; display:block; }
-    nav { background-color: var(--blue2); }
-    .navwrap{ max-width:1100px; margin:0 auto; display:flex; justify-content:center; gap:24px; padding:10px; flex-wrap:wrap; }
-    nav a { color: white; text-decoration: none; font-weight: 700; }
-    .hero { position:relative; background: url('America.jpg') no-repeat center/cover; height: 400px; display: flex; align-items: center; justify-content: center; color: white; }
-    .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.45));}
-    .hero h1{ position:relative; margin:0; padding:0 12px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); font-size: 2.2em; text-align: center; }
-    section { max-width: 1000px; margin: 32px auto; padding: 20px; background: var(--card); border-radius: 10px; box-shadow: var(--shadow); }
-    h2 { color: var(--blue); margin-top:0; }
-    footer { background: var(--blue); color: white; text-align: center; padding: 20px; margin-top: 40px; }
-    .language-switcher { text-align: center; margin: 12px 0 0; }
-    .language-switcher a { margin: 0 10px; color: var(--blue); text-decoration: underline; }
-    .carousel { position: relative; overflow: hidden; max-width: 100%; height: 360px; border-radius: 10px; background:#eee; }
-    .carousel-track { display: flex; transition: transform 0.5s ease; height: 100%; }
-    .carousel figure { margin: 0; height: 100%; flex: 0 0 100%; }
-    .carousel img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .carousel button { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,.45); color: #fff; border: 0; padding: 10px 14px; cursor: pointer; border-radius: 6px; }
-    .carousel .prev { left: 10px; } .carousel .next { right: 10px; }
-    .tabs { display:flex; gap:12px; margin:12px 0 18px; flex-wrap:wrap; }
-    .tab { flex:1 1 220px; display:block; background:#eef5ff; color:#0a3b8a; border:2px solid #cfe2ff; border-radius:10px; padding:14px 16px; text-align:center; font-weight:700; text-decoration:none; box-shadow: var(--shadow); }
-    .tab:hover{ background:#e4efff; }
-    .services-preview{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
-    .services-preview .card{background:#fff;border-radius:10px;box-shadow:var(--shadow);padding:16px}
-    .services-preview h3{margin:0 0 8px;color:var(--blue)}
-    .services-preview ul{margin:0 0 8px 18px;padding:0}
-    @media (max-width:700px){ .hero{height:300px} .services-preview{grid-template-columns:1fr} }
+    :root{
+      --blue:#004080;
+      --blue2:#0066cc;
+      --bg:#f9f9f9;
+      --card:#fff;
+      --shadow:0 2px 10px rgba(0,0,0,.1);
+    }
+    *{box-sizing:border-box;}
+
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background-color:var(--bg);color:#333;}
+
+    /* Header with centered, larger logo */
+    header{background:var(--blue);color:#fff;}
+    .bar{max-width:1100px;margin:0 auto;display:flex;justify-content:center;align-items:center;padding:16px;}
+    .brand img{height:80px;width:auto;display:block;}      /* increase logo size */
+    .brand .title{display:none;}                           /* hide separate text */
+
+    nav{background-color:var(--blue2);}
+    .navwrap{max-width:1100px;margin:0 auto;display:flex;justify-content:center;gap:24px;padding:10px;flex-wrap:wrap;}
+    nav a{color:white;text-decoration:none;font-weight:700;}
+
+    .language-switcher{text-align:center;margin:12px 0 0;}
+    .language-switcher a{margin:0 10px;color:var(--blue);text-decoration:underline;}
+
+    /* Hero section with dark overlay */
+    .hero{position:relative;background:url('America.jpg') no-repeat center/cover;height:400px;display:flex;align-items:center;justify-content:center;color:white;}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.45));}
+    .hero h1{position:relative;margin:0;padding:0 12px;text-shadow:2px 2px 4px rgba(0,0,0,0.7);font-size:2.2em;text-align:center;}
+
+    /* Carousel */
+    .carousel{position:relative;overflow:hidden;max-width:100%;height:360px;border-radius:10px;background:#eee;}
+    .carousel-track{display:flex;transition:transform .5s ease;height:100%;}
+    .carousel figure{margin:0;height:100%;flex:0 0 100%;}
+    .carousel img{width:100%;height:100%;object-fit:cover;display:block;}
+    .carousel button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.45);color:#fff;border:0;padding:10px 14px;cursor:pointer;border-radius:6px;}
+    .carousel .prev{left:10px;}
+    .carousel .next{right:10px;}
+
+    /* Service preview cards */
+    .service-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:12px;}
+    .service-card{background:#eef5ff;border:2px solid #cfe2ff;border-radius:10px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:space-between;}
+    .service-card h3{margin-top:0;color:var(--blue);}
+    .service-card ul{padding-left:20px;margin:8px 0;}
+    .service-card a{margin-top:auto;color:#004080;font-weight:700;text-decoration:none;}
+
+    section{max-width:1000px;margin:32px auto;padding:20px;background:var(--card);border-radius:10px;box-shadow:var(--shadow);}
+    h2{color:var(--blue);margin-top:0;}
+    footer{background:var(--blue);color:white;text-align:center;padding:20px;margin-top:40px;}
+
+    @media (max-width:700px){
+      .hero{height:300px;}
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="bar">
       <div class="brand">
-        <img src="logo.png" alt="Immigration General Services LLC">
+        <img src="logo.png" alt="Immigration General Services logo" onerror="this.style.display='none'">
+        <div class="title">Immigration General Services LLC</div>
       </div>
     </div>
   </header>
+
   <nav>
     <div class="navwrap">
       <a href="#about">About Us</a>
@@ -59,6 +81,7 @@
       <a href="#contact">Contact</a>
     </div>
   </nav>
+
   <div class="language-switcher">
     View this page in:
     <a href="index.html">English</a> |
@@ -66,65 +89,66 @@
     <a href="index-fr.html">Français</a> |
     <a href="index-pt.html">Português</a>
   </div>
+
   <div class="hero">
-    <h1>Empowering immigrants with reliable, compassionate, and professional support</h1>
+    <h1>Empowering immigrants with reliable, compassionate and professional support</h1>
   </div>
-  <section style="padding:0; margin-top:-10px;">
+
+  <section style="padding:0;margin-top:-10px;">
     <div class="carousel" id="carousel">
       <div class="carousel-track" id="carouselTrack">
-        <figure><img src="immigrant-family.jpeg" alt="" /></figure>
-        <figure><img src="Chicago.jpg" alt="" /></figure>
-        <figure><img src="Houston.jpg" alt="" /></figure>
-        <figure><img src="success.jpg" alt="" /></figure>
+        <figure><img src="immigrant-family.jpeg" alt=""></figure>
+        <figure><img src="Chicago.jpg" alt=""></figure>
+        <figure><img src="Houston.jpg" alt=""></figure>
+        <figure><img src="America.jpg" alt=""></figure>
       </div>
       <button class="prev" aria-label="Previous slide" id="prevBtn">❮</button>
       <button class="next" aria-label="Next slide" id="nextBtn">❯</button>
     </div>
   </section>
+
   <section id="about">
     <h2>About Us</h2>
-    <p>Immigration General Services LLC is built on the belief that immigrants deserve more than just legal paperwork—they deserve respect, understanding, and support from people who know their journey. We offer a warm, inclusive environment where our clients can receive comprehensive immigration support from start to finish.</p>
+    <p>Immigration General Services LLC is built on the belief that immigrants deserve more than just legal paperwork&mdash;they deserve respect, understanding, and support from people who know their journey. We offer a warm, inclusive environment where our clients can receive comprehensive immigration support from start to finish.</p>
     <p>We connect you with trusted attorneys, certified translators, trained paralegals, and public notaries. With us, you don’t have to search elsewhere. We are immigrants helping immigrants.</p>
   </section>
+
   <section id="services">
     <h2>Our Services</h2>
-    <div class="tabs">
-      <a class="tab" href="services-individuals.html">Individuals</a>
-      <a class="tab" href="services-business.html">Business</a>
-    </div>
-    <div class="services-preview">
-      <div class="card">
-        <h3>For Individuals</h3>
+    <div class="service-preview">
+      <div class="service-card">
+        <h3>Individuals</h3>
         <ul>
-          <li>Attorney referrals &amp; coordination</li>
-          <li>USCIS form prep &amp; filing support</li>
-          <li>Asylum, VAWA, TPS</li>
-          <li>Work Permits (EAD)</li>
+          <li>Immigration form preparation & filing</li>
+          <li>Attorney referrals & court representation coordination (EOIR)</li>
+          <li>Certified translations & notary services</li>
         </ul>
-        <p><a href="services-individuals.html">See all services →</a></p>
+        <a href="services-individuals.html">See all services →</a>
       </div>
-      <div class="card">
-        <h3>For Business</h3>
+      <div class="service-card">
+        <h3>Business</h3>
         <ul>
-          <li>I-9 verification &amp; status review</li>
-          <li>Employee vetting</li>
-          <li>H-visas, PERM &amp; labor certs</li>
-          <li>Compliance advisory &amp; audits</li>
+          <li>I‑9 verification & status review</li>
+          <li>Employee vetting & H‑visa/PERM applications</li>
+          <li>Compliance advisory & audits</li>
         </ul>
-        <p><a href="services-business.html">See all services →</a></p>
+        <a href="services-business.html">See all services →</a>
       </div>
     </div>
   </section>
+
   <section id="why">
     <h2>Why Choose Us</h2>
     <p>Many members of our team were once clients themselves. Today, they bring firsthand experience and deep empathy to help others on their journey. Our partner attorneys bring over 30 years of combined experience advocating for immigrant rights in court.</p>
-    <p>We have a proven record of success—in and out of court. Many of our former clients have achieved favorable outcomes and are now proud, productive members of their communities across the United States.</p>
+    <p>We have a proven record of success&mdash;in and out of court. Many of our former clients have achieved favorable outcomes and are now proud, productive members of their communities across the United States.</p>
     <p>We know what you're going through—we've been there. That’s why we are fully committed to navigating the process with responsibility, transparency, and a steadfast dedication to the law.</p>
   </section>
+
   <section id="team">
     <h2>Our Team</h2>
     <p>Profiles and descriptions of our diverse and experienced team go here.</p>
   </section>
+
   <section id="values">
     <h2>Our Values</h2>
     <ul style="columns:2">
@@ -134,20 +158,24 @@
       <li>Empathy</li>
     </ul>
   </section>
+
   <section id="testimonials">
     <h2>Testimonials</h2>
     <p>"Immigration General Services guided me patiently through every step. I felt understood and supported." — Maria G.</p>
     <p>"Professional, kind, and efficient. They made a stressful process much easier." — John P.</p>
   </section>
+
   <section id="contact">
     <h2>Contact</h2>
-    <p>📍 20 N Wacker Dr, Suite 1000, Chicago IL 60606<br>
-       📞 Tel: <a href="tel:13312095424">331-209-5424</a><br>
+    <p>📍 20 N Wacker Dr, Suite 1000, Chicago IL 60606<br>
+       📞 Tel: <a href="tel:13312095424">331‑209‑5424</a><br>
        ✉️ Email: <a href="mailto:info@immigrationgeneralservices.com">info@immigrationgeneralservices.com</a></p>
   </section>
+
   <footer>
-    &copy; 2025 Immigration General Services LLC. All Rights Reserved.
+    &copy; 2025 Immigration General Services LLC. All Rights Reserved.
   </footer>
+
   <script>
     (function(){
       const track = document.getElementById('carouselTrack');
@@ -155,15 +183,27 @@
       const slides = Array.from(track.children);
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
-      let index = 0;
-      function goTo(i){ index = (i + slides.length) % slides.length; track.style.transform = 'translateX(' + (-index * 100) + '%)'; }
-      if(prevBtn) prevBtn.addEventListener('click', ()=> goTo(index-1));
-      if(nextBtn) nextBtn.addEventListener('click', ()=> goTo(index+1));
-      setInterval(()=> goTo(index+1), 4000);
-      let startX=null; track.addEventListener('touchstart', e=>{startX=e.touches[0].clientX});
-      track.addEventListener('touchend', e=>{ if(startX===null) return; const dx=e.changedTouches[0].clientX-startX; if(Math.abs(dx)>40){ dx>0?goTo(index-1):goTo(index+1);} startX=null; });
+      let index=0;
+      function goTo(i){
+        index=(i+slides.length)%slides.length;
+        track.style.transform = 'translateX(' + (-index*100) + '%)';
+      }
+      if(prevBtn) prevBtn.addEventListener('click', ()=>goTo(index-1));
+      if(nextBtn) nextBtn.addEventListener('click', ()=>goTo(index+1));
+      setInterval(()=>goTo(index+1),4000);
+      let startX=null;
+      track.addEventListener('touchstart', e=>{startX=e.touches[0].clientX});
+      track.addEventListener('touchend', e=>{
+        if(startX===null) return;
+        const dx=e.changedTouches[0].clientX-startX;
+        if(Math.abs(dx)>40){ dx>0?goTo(index-1):goTo(index+1); }
+        startX=null;
+      });
     })();
   </script>
+</body>
+</html>
+
 </body>
 </html>
 
